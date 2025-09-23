@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poznati sportisti Srbije</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="zaglavlje">
+        <a href="#pocetna" class="logo">
+            <img src="slike/Logo.png" alt="logo Srpskih sportista">
+            Srpski Sportisti
+        </a>
+        <nav>
+            <ul id="mobilni-nav">
+                <li><a href="#pocetna">Početna</a></li>
+                <li><a href="#licnosti">Ličnosti</a></li>
+                <li><a href="#galerija">Galerija</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div class="dugmad-zaglavlja">
+            <button class="hamburger-dugme">&#9776;</button>
+            <button id="promeni-temu">Promeni temu</button>
+            <button id="povecaj-font">A+</button>
+            <button id="smanji-font">A-</button>
+        </div>        
+    </header>
+
+    <main>
+        <section id="pocetna" class="active">
+            <div class="naslov">
+                <h1>Poznati sportisti Srbije</h1>
+                <p>Srbija je zemlja koja je svetu podarila neke od najvećih sportista svih vremena. Od teniskih i košarkaških legendi, preko šampiona u odbojci i vaterpolu, do neustrašivih boraca u tekvondou i fudbalu, naši sportisti svojim uspesima ponosno predstavljaju zemlju na svetskoj sceni.</p>
+            </div>
+            
+            <div class="sadrzaj-sportskih-objekata">
+                <h2>Sportski objekti Srbije</h2>
+                <div class="omotac-objekata">
+                    <article class="kutija-objekta">
+                        <img src="slike/cair.jpg" alt="Sportski centar Čair u Nišu" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPuKAnE5lbW9ndcOjZSB1xI1pdGF0aTwvdGV4dD48L3N2Zz4='">
+                        <h3>Sportski centar Čair</h3>
+                        <p>Višenamenska dvorana u Nišu, domaćin brojnih sportskih takmičenja, koncerata i drugih manifestacija. Važan centar za južnu Srbiju.</p>
+                    </article>
+                    <article class="kutija-objekta">
+                        <img src="slike/kolubara.jpg" alt="Stadion Kolubara u Lazarevcu" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPuKAnE5lbW9ndcOjZSB1xI1pdGF0aTwvdGV4dD48L3N2Zz4='">
+                        <h3>Stadion Kolubara</h3>
+                        <p>Fudbalski stadion u Lazarevcu, dom lokalnog kluba. Poznat je po svojoj atmosferi i strastvenim navijačima.</p>
+                    </article>
+                    <article class="kutija-objekta">
+                        <img src="slike/radnicki.jpg" alt="Stadion Čika Dača u Kragujevcu" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPuKAnE5lbW9ndcOjZSB1xI1pdGF0aTwvdGV4dD48L3N2Zz4='">
+                        <h3>Stadion Čika Dača (Radnički)</h3>
+                        <p>Stadion u Kragujevcu, dom fudbalskog kluba Radnički. Predstavlja epicentar sportskog života Šumadije.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="licnosti">
+            <h2>Poznate ličnosti</h2>
+            <div class="dugmad-filtera">
+                <button class="dugme-filtera active" data-filter="svi">Svi sportovi</button>
+                <button class="dugme-filtera" data-filter="tenis">Tenis</button>
+                <button class="dugme-filtera" data-filter="kosarka">Košarka</button>
+                <button class="dugme-filtera" data-filter="tekvondo">Tekvondo</button>
+                <button class="dugme-filtera" data-filter="fudbal">Fudbal</button>
+                <button class="dugme-filtera" data-filter="odbojka">Odbojka</button>
+                <button class="dugme-filtera" data-filter="vaterpolo">Vaterpolo</button>
+            </div>
+            <div class="omotac-licnosti"></div>
+        </section>
+
+        <section id="galerija">
+            <h2>Galerija reprezentacija</h2>
+            <div class="omotac-slajdera">
+                <button class="dugme-prethodna">‹</button>
+                <div class="kontejner-slajdera">
+                    <div class="slajder"></div>
+                </div>
+                <button class="dugme-sledeca">›</button>
+            </div>
+        </section>
+
+        <section id="kontakt">
+            <h2>Kontakt</h2>
+            <div class="forma-kontakta">
+                <p>Za sva pitanja, kontaktirajte nas putem forme ispod.</p>
+                <form>
+                    <label for="ime">Ime:</label>
+                    <input type="text" id="ime" name="ime" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="poruka">Poruka:</label>
+                    <textarea id="poruka" name="poruka" required></textarea>
+                    <button type="submit">Pošalji poruku</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>2025 Veb prezentacija srpskih sportista - Petar Kerčov</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
