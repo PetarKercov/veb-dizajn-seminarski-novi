@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburgerDugme: document.querySelector('.hamburger-dugme'),
         navZaglavlje: document.querySelector('#zaglavlje nav'),
         slajder: document.querySelector('.slajder'),
-        prethodnaBtn: document.querySelector('.dugme-prethodna'),
-        sledecaBtn: document.querySelector('.dugme-sledeca'),
+        prethodnaDugme: document.querySelector('.dugme-prethodna'),
+        sledecaDugme: document.querySelector('.dugme-sledeca'),
         forma: document.querySelector('#kontakt form'),
         povecajDugme: document.getElementById('povecaj-font'),
         smanjiDugme: document.getElementById('smanji-font'),
@@ -178,15 +178,15 @@ const GALERIJA_PODACI = [ {"godina": "2000", "takmicenje": "Olimpijske igre, Sid
         });
 
         // Dugmad za slajder
-        if (ELEMENTI.sledecaBtn) {
-            ELEMENTI.sledecaBtn.onclick = () => {
+        if (ELEMENTI.sledecaDugme) {
+            ELEMENTI.sledecaDugme.onclick = () => {
                 sviSlajdovi[trenutniIndex].style.display = 'none';
                 trenutniIndex = (trenutniIndex + 1) % sviSlajdovi.length;
                 sviSlajdovi[trenutniIndex].style.display = 'block';
             };
         }
-        if (ELEMENTI.prethodnaBtn) {
-            ELEMENTI.prethodnaBtn.onclick = () => {
+        if (ELEMENTI.prethodnaDugme) {
+            ELEMENTI.prethodnaDugme.onclick = () => {
                 sviSlajdovi[trenutniIndex].style.display = 'none';
                 trenutniIndex = (trenutniIndex - 1 + sviSlajdovi.length) % sviSlajdovi.length;
                 sviSlajdovi[trenutniIndex].style.display = 'block';
