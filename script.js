@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinkovi: document.querySelectorAll('#zaglavlje nav ul li a'),
         sekcije: document.querySelectorAll('section'),
         filterDugme: document.querySelectorAll('.dugme-filtera'),
-        licnostiWrapper: document.querySelector('.omotac-licnosti'),
+        LicnostiOmotac: document.querySelector('.omotac-licnosti'),
         promeniTemu: document.getElementById('promeni-temu'),
         hamburgerDugme: document.querySelector('.hamburger-dugme'),
         navZaglavlje: document.querySelector('#zaglavlje nav'),
@@ -111,8 +111,8 @@ const GALERIJA_PODACI = [ {"godina": "2000", "takmicenje": "Olimpijske igre, Sid
 
     // --- PRIKAZ SPORTISTA (filter) --- //
     const prikaziSportiste = (filter) => {
-        if (!ELEMENTI.licnostiWrapper) return;
-        ELEMENTI.licnostiWrapper.innerHTML = '';
+        if (!ELEMENTI.LicnostiOmotac) return;
+        ELEMENTI.LicnostiOmotac.innerHTML = '';
 
         const filtrirani = (filter === 'svi' || !filter) ? SPORTISTI_PODACI : SPORTISTI_PODACI.filter(s => s.sport === filter);
 
@@ -139,7 +139,7 @@ const GALERIJA_PODACI = [ {"godina": "2000", "takmicenje": "Olimpijske igre, Sid
             licnostDiv.appendChild(img);
             licnostDiv.appendChild(infoDiv);
 
-            ELEMENTI.licnostiWrapper.appendChild(licnostDiv);
+            ELEMENTI.LicnostiOmotac.appendChild(licnostDiv);
         });
     };
 

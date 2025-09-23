@@ -142,7 +142,7 @@ section {
     box-sizing: border-box;
     padding-top: 100px;
     padding-bottom:80px; 
-    min-height: 100vh;
+    min-height: 85vh;
 }
 section.active {
     opacity: 1;
@@ -393,11 +393,14 @@ section.active {
 /* Footer */
 
 footer {
-    padding: 2rem;
+    padding: .5rem;
     background-color: var(--sekundarna-boja);
     color: var(--boja-teksta);
     text-align: center;
     border-top: 1px solid var(--boja-ivice);
+    bottom:0;
+    width:100%;
+    position:fixed;
 }
 
 /* Responsive dizajn */
