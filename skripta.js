@@ -151,14 +151,14 @@ const GALERIJA_PODACI = [ {"godina": "2000", "takmicenje": "Olimpijske igre, Sid
 
         GALERIJA_PODACI.forEach(podatak => {
             const slajd = document.createElement('div');
-            slajd.className = 'slide';
+            slajd.className = 'slajd';
 
             const slajdInfo = document.createElement('div');
-            slajdInfo.className = 'slide-info';
+            slajdInfo.className = 'slajd-info';
             slajdInfo.innerHTML = `
-                <p class="slide-sport">${podatak.sport}</p>
-                <p class="slide-takmicenje">${podatak.takmicenje} (${podatak.godina})</p>
-                <p class="slide-medalja">${podatak.medalja}</p>
+                <p class="slajd-sport">${podatak.sport}</p>
+                <p class="slajd-takmicenje">${podatak.takmicenje} (${podatak.godina})</p>
+                <p class="slajd-medalja">${podatak.medalja}</p>
             `;
 
             const img = document.createElement('img');
@@ -170,7 +170,7 @@ const GALERIJA_PODACI = [ {"godina": "2000", "takmicenje": "Olimpijske igre, Sid
             ELEMENTI.slajder.appendChild(slajd);
         });
 
-        const sviSlajdovi = ELEMENTI.slajder.querySelectorAll('.slide');
+        const sviSlajdovi = ELEMENTI.slajder.querySelectorAll('.slajd');
         if (!sviSlajdovi.length) return;
 
         sviSlajdovi.forEach((slajd, i) => {
