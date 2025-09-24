@@ -1,6 +1,5 @@
-// --- OPTIMIZOVANI I KOMPLETNI JS --- //
 document.addEventListener('DOMContentLoaded', () => {
-    // --- KONSTANTE I ELEMENTI --- //
+    /* Konstante i elementi */
     const ELEMENTI = {
         navLinkovi: document.querySelectorAll('#zaglavlje nav ul li a'),
         sekcije: document.querySelectorAll('section'),
@@ -17,9 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         smanjiDugme: document.getElementById('smanji-font'),
     };
 
-    const zaglavlje = document.getElementById('zaglavlje');
-
-// --- PODACI --- // 
+/* Podaci */ 
 const SPORTISTI_PODACI = [ {"ime": "Novak Đoković", "sport": "tenis", "opis": "Najbolji teniser svih vremena, osvajač rekordnog broja Grand Slam titula.", "slika": "slike/novak-djokovic.jpg"}, 
     {"ime": "Jelena Janković", "sport": "tenis", "opis": "Bivša prva teniserka sveta, poznata po borbenom duhu i atraktivnoj igri.", "slika": "slike/jelena-jankovic.jpg"}, 
     {"ime": "Ana Ivanović", "sport": "tenis", "opis": "Grand Slam šampionka i bivša prva na WTA listi, popularna širom sveta.", "slika": "slike/ana-ivanovic.jpg"}, 
@@ -51,7 +48,7 @@ const GALERIJA_PODACI = [ {"godina": "2000", "takmicenje": "Olimpijske igre, Sid
     {"godina": "2024", "takmicenje": "Olimpijske igre, Pariz", "medalja": "Bronza", "sport": "Muška košarka", "slika": "slike/kosarka-2024.jpg"} ];
 
   
-    // --- POMOĆNE FUNKCIJE --- //
+    // Pomoćne funkcije
     const dohvatiOsnovnuPutanju = () => {
         const trenutniUrl = window.location.href;
         if (trenutniUrl.startsWith('file://')) {
@@ -84,7 +81,7 @@ const GALERIJA_PODACI = [ {"godina": "2000", "takmicenje": "Olimpijske igre, Sid
         sekcija.addEventListener('transitionend', priZavrsetku);
     };
 
-    // --- PRIKAZ SEKCIJE --- //
+    // Prikaz sekcije
     const prikaziSekciju = (idSekcije) => {
         const ciljnaSekcija = document.getElementById(idSekcije);
         if (!ciljnaSekcija) return;
@@ -109,7 +106,7 @@ const GALERIJA_PODACI = [ {"godina": "2000", "takmicenje": "Olimpijske igre, Sid
         window.scrollTo({ top: 0, behavior: 'auto' });
     };
 
-    // --- PRIKAZ SPORTISTA (filter) --- //
+    // Prikaz sportista sa odabranim filterom  
     const prikaziSportiste = (filter) => {
         if (!ELEMENTI.LicnostiOmotac) return;
         ELEMENTI.LicnostiOmotac.innerHTML = '';
@@ -143,7 +140,7 @@ const GALERIJA_PODACI = [ {"godina": "2000", "takmicenje": "Olimpijske igre, Sid
         });
     };
 
-    // --- SLAJDER / GALERIJA --- //
+    // Slajder/Galrija 
     let trenutniIndex = 0;
     const inicijalizujSlajder = () => {
         if (!ELEMENTI.slajder) return;
@@ -194,7 +191,7 @@ const GALERIJA_PODACI = [ {"godina": "2000", "takmicenje": "Olimpijske igre, Sid
         }
     };
 
-    // --- AŽURIRANJE SLIKA --- //
+    // --- Ažuriranje slika 
     const azurirajStatickeSlike = () => {
         document.querySelectorAll('img[src^="slike/"]').forEach(img => {
             const original = img.getAttribute('src');
@@ -204,7 +201,7 @@ const GALERIJA_PODACI = [ {"godina": "2000", "takmicenje": "Olimpijske igre, Sid
         });
     };
 
-     // --- COOKIE FUNKCIJE --- //
+     // Cookie funkcije
     // Kreiranje cookie-ja sa 30 dana trajanja
     function napraviCookie(ime, vrednost) {
         const danas = new Date();
@@ -228,7 +225,7 @@ const GALERIJA_PODACI = [ {"godina": "2000", "takmicenje": "Olimpijske igre, Sid
       
 
 
-    // --- EVENT LISTENERI --- //
+    // Event Listeneri
     if (ELEMENTI.navLinkovi && ELEMENTI.navLinkovi.length) {
         ELEMENTI.navLinkovi.forEach(link => {
             link.addEventListener('click', (e) => {
@@ -251,7 +248,7 @@ const GALERIJA_PODACI = [ {"godina": "2000", "takmicenje": "Olimpijske igre, Sid
         });
     }
 
-// --- Promena teme sa cookie-jem --- //
+// Promena teme 
     if (ELEMENTI.promeniTemu) {
     ELEMENTI.promeniTemu.addEventListener('click', () => {
         const aktivnaTamna = document.body.classList.toggle('tamna-tema');
@@ -281,7 +278,7 @@ const GALERIJA_PODACI = [ {"godina": "2000", "takmicenje": "Olimpijske igre, Sid
             });
         });
     }
-
+    // Validacija forme
     if (ELEMENTI.forma) {
         ELEMENTI.forma.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -322,7 +319,7 @@ const GALERIJA_PODACI = [ {"godina": "2000", "takmicenje": "Olimpijske igre, Sid
         });
     }
 
-    // --- INICIJALIZACIJA --- //
+    // Incijalni prikaz početne sekcije
     ELEMENTI.sekcije.forEach(sec => {
         if (sec.id === 'pocetna') {
             sec.style.display = 'block';

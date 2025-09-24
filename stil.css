@@ -31,8 +31,9 @@ body {
     margin: 0;
     padding: 0;
     color: var(--boja-teksta);
-    transition: var(--prelaz);
     background: var(--boja-pozadine);
+    opacity: 0;
+    animation: pojavljivanje 1s ease-in forwards;
 }
 
 /* Naslovi i tekst */
@@ -464,4 +465,9 @@ footer {
     h2{
     padding-top: 3rem;
     }
+}
+
+@keyframes pojavljivanje {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
