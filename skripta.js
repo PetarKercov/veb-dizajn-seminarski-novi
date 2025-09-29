@@ -140,7 +140,7 @@ const GALERIJA_PODACI = [ {"godina": "2000", "takmicenje": "Olimpijske igre, Sid
         });
     };
 
-    // Slajder/Galrija 
+    // Slajder/Galerija 
     let trenutniIndex = 0;
     const inicijalizujSlajder = () => {
         if (!ELEMENTI.slajder) return;
@@ -191,7 +191,7 @@ const GALERIJA_PODACI = [ {"godina": "2000", "takmicenje": "Olimpijske igre, Sid
         }
     };
 
-    // --- Ažuriranje slika 
+    // Ažuriranje slika 
     const azurirajStatickeSlike = () => {
         document.querySelectorAll('img[src^="slike/"]').forEach(img => {
             const original = img.getAttribute('src');
